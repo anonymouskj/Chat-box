@@ -70,10 +70,20 @@
 
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+<%
+	String uid=(String)session.getAttribute("userid");
+%>
+<h1 align="center">welcome&nbsp;<%=uid%></h1>
 <div id="chat-sidebar">
+  <%-- <img src="<%=contextpath %>/users.png" /> --%>
+ 
 <script type="text/javascript">
-	var userName = '<%=request.getParameter("username")%>';
-	$(document).ready(function(){ 
+
+         
+	var userName = '<%=session.getAttribute("userid")%>';
+	
+ 	$(document).ready(function(){ 
 		$.cometChat.onLoad({memberListContainerID:'members'});
 		join(userName);
 	});

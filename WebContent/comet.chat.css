@@ -1,4 +1,4 @@
-./* chatInput{
+.window{
 	border:2px solid #31B404;
 	background-color: #FFFFF;
 	color: #000000;
@@ -6,13 +6,23 @@
 	padding-left: 2px;
 	height: 20px;
 	width: 195px;
-} */
+}
 /* .fromUserName {
 	color: #FF0000;
     font-family: sans-serif;
     font-size: 12px;
     font-weight: bold;	
 } */
+.fromUserName{
+	background:#d4e7fa;
+	padding:5px;
+	min-height:15px;
+	margin-bottom:5px;
+	position:relative;
+	margin-left:10px;
+	border-radius:5px;
+	word-break: break-all;
+}
 .fromMessage {
     color: #9A2EFE;
     font-family: sans-serif;
@@ -20,14 +30,18 @@
 }
 
 .toUserName {
-	color: #0000FF;
-	font-family: sans-serif;
-	font-size: 10px; 
-	font-weight: bold;
+	background:#d4e7fa;
+	padding:5px;
+	min-height:15px;
+	margin-bottom:5px;
+	position:relative;
+	margin-left:10px;
+	border-radius:5px;
+	word-break: break-all;
 }
 
 .toMessage {
-    color: #B45F04;
+     color: #9A2EFE;
     font-family: sans-serif;
     font-size: 10px;
 }
@@ -107,16 +121,7 @@ body{
 	word-break: break-all;
 }
 
-.fromUserName{
-	background:#d4e7fa;
-	padding:5px;
-	min-height:15px;
-	margin-bottom:5px;
-	position:relative;
-	margin-left:10px;
-	border-radius:5px;
-	word-break: break-all;
-}
+
 /**** Slider Layout Popup *********/
 
  #chat-sidebar {

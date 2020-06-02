@@ -6,7 +6,7 @@ function ChatWindow(config) {
     var _loginUserName;
     var _config;
     this._windowWidth  = 300;
-    this._windowHeight = 500;
+    this._windowHeight = 350;
     this.lastUser      = null;
     this.windowArray   = [];
    
@@ -20,7 +20,7 @@ function ChatWindow(config) {
     
     this.getLoginUserName = function() {
     	return this._loginUserName;
-    };
+    };	
     
     this.getMessageContainerID = function() {
     	return this.getLoginUserName() + "_" + this.getPeerUserName();

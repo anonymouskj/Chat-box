@@ -67,9 +67,9 @@
             var sb = [];
             $.each(message.data, function() {
             	if ($.cometChat.loginUserName == this) { //login user
-            		sb[sb.length] = "<span style=\";color: #FF0000;\">" + this + "</span><br>";
+         sb[sb.length] = "</img><span  style=\";color: #FF0000;padding:3px;\">" + this + "</div><br>";
             	} else { //peer users
-            		sb[sb.length] = "<span onclick=\"javascript:createWindow('" + $.cometChat.loginUserName + "', '" + this + "');\"  style=\"cursor: pointer;color: #0000FF;\">" + this + "</span><br>";
+            		sb[sb.length] = "<span id=image\" onclick=\"javascript:createWindow('" + $.cometChat.loginUserName + "', '" + this + "');\"  style=\"cursor: pointer;color: #0000FF;\">" + this + "</span><br>";
             	}
             });
             $('#' + $.cometChat.memberListContainerID).html(sb.join("")); 
