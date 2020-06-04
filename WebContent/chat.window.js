@@ -140,7 +140,7 @@ function ChatWindow(config) {
     	var headerDIV = document.createElement("div");
     	headerDIV.style.width  = this._windowWidth + "px";
     	headerDIV.style.height = "30px";
-    	headerDIV.style.backgroundColor = '#b47c04'; 
+    	headerDIV.style.backgroundColor = '#030303'; 
     	headerDIV.style.position = 'relative';
     	headerDIV.style.top      = 0;
     	headerDIV.style.left     = 0;

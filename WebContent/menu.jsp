@@ -1,44 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
-	<head>
-		 <!-- <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
-		<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
- -->		<style>
-#nav {
-list-style:none inside;
-margin:0;
-padding:0;
-text-align:center;
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
 }
-#nav li {
-display:block;
-position:relative;
-float:left;
-background:#ffffff; /* menu background color */
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
 }
-#nav li a {	
-display:block;
-padding:0;
-text-decoration:none;
-width:191px; /* this is the width of the menu items */
-line-height:35px; /* this is the hieght of the menu items */
-color:0066CC; /* list item font color */
+
+.sidebar a:hover {
+  color: #f1f1f1;
 }
-#nav li li a {font-size:80%;} /* smaller font size for sub menu items */
-#nav li:hover {background:#E0E0E0;} /* highlights current hovered list item and the parent list items when hovering over sub menues */
-#nav ul {
-position:absolute;
-padding:0;
-left:0;
-display:none; /* hides sublists */
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
 }
-#nav li:hover ul ul {display:none;} /* hides sub-sublists */
-#nav li:hover ul {display:block;} /* shows sublist on hover */
-#nav li li:hover ul {
-display:block; /* shows sub-sublist on hover */
-margin-left:200px; /* this should be the same width as the parent list item */
-margin-top:-35px; /* aligns top of sub menu with top of list item */
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
+
+
 </style>
 </head>
 	<body>
@@ -48,7 +50,7 @@ margin-top:-35px; /* aligns top of sub menu with top of list item */
 	%>   
 	
 
-<ul id="nav">
+<!-- <ul id="nav">
 		  <li><a href="#">settings</a>
 		  		<ul>
 		  			<li><a href="changepwd.jsp" >change password</a></li>
@@ -57,8 +59,13 @@ margin-top:-35px; /* aligns top of sub menu with top of list item */
 	<li><a href="logout.jsp" >Logout</a></li>
 		  
 		  
-	</ul>
-		
+	</ul> -->
+		<div class="sidebar">
+  <a href="hometype.jsp"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="changepwd.jsp"><i class="fa fa-fw fa-wrench"></i> Settings</a>
+  <a href="logout.jsp"><i class="fa fa-fw fa-user"></i> Logout</a>
+  <a href="application.jsp"><i class="fa fa-fw fa-envelope"></i> Chat</a>
+</div>
 		
 		<!-- <script type="text/javascript">
 		<!--

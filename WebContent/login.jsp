@@ -33,7 +33,7 @@ while(rs.next()){
 }
 %>
   
- <jsp:forward page="home.html"></jsp:forward>
+ <jsp:forward page="home.jsp"></jsp:forward>
 
 </body>
 </html>

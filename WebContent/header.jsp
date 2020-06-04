@@ -7,35 +7,29 @@
 <%String contextpath=request.getContextPath(); %>
 <html>
 <head>
-<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
-<%-- <link rel="stylesheet" href="<%=contextpath%>/css/bootstrap.min.css"> --%> 
+
+<%-- <link rel="stylesheet" href="<%=contextpath%>/css/bootstrap.min.css"> --%>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Cool Sign Up Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 </head>
 <body>
 <%
 	String uid=(String)session.getAttribute("userid");
 	if(uid==null){
 %>
-		 <jsp:forward page="index.html"></jsp:forward>
+		 <jsp:forward page="index.jsp"></jsp:forward>
 <%
 	}
 	else{
 		
 	
 %>
-<div id="templatemo_background_section_top">
-		<div class="templatemo_container">
-			<div id="templatemo_header">
-				<div id="templatemo_logo">
-					<h1>Chat Live</h1>
-                  
-				</div>
-            <%if(!uid.equals("admin")){ %>
-				<div id="templatemo_search_box">
-					<%-- <jsp:include page="search.jsp"></jsp:include> --%>
-				</div>
-			<%} %>
-		</div>
-	</div></div>
+
 	<div>
 	<jsp:include page="menu.jsp"></jsp:include>
 	</div>

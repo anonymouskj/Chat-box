@@ -128,7 +128,7 @@ function valid1(){
             <div class="login-form">    	
               <form action="login.jsp" method="post" onsubmit="return valid1()" >
 			      <img src="<%=contextpath %>/users.png" /> 
-                
+                <p style="color: red;">invalid username or password</p>
                   <div class="form-group">
                      <label>User Name</label>
                      <input type="text" class="form-control" name="uname" placeholder="User Name">

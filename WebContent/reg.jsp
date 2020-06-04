@@ -5,23 +5,26 @@
 <%@page import="javax.servlet.http.HttpServletResponse"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html>
+<html lang="en">
 <head>
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Cool Sign Up Form</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 <style type="text/css">
 	body {
 		color: #fff;
-		background: #344a71;
+		background: #000;
 		font-family: 'Roboto', sans-serif;
 	}
 	.form-control {		
 		min-height: 41px;
 		box-shadow: none;
-		border-color: #e1e4e5;
+		border-color: #000;
 	}
 	.form-control:focus {
 		border-color: #49c1a2;
@@ -30,12 +33,12 @@
         border-radius: 3px;
     }
 	.signup-form {
-		width: 400px;
+		width: 600px;
 		margin: 0 auto;
 		padding: 30px 0;
 	}
 	.signup-form form {
-		color: #9ba5a8;
+		color: #000;
 		border-radius: 3px;
     	margin-bottom: 15px;
         background: #fff;
@@ -60,7 +63,7 @@
 	.signup-form .btn {        
         font-size: 16px;
         font-weight: bold;
-		background: #49c1a2;
+		background: #000;
 		border: none;
 		min-width: 140px;
     }
@@ -254,10 +257,10 @@
 
 <body>
 
-
+   <div class="signup-form">
      <form action="regstore.jsp"  method="post" onsubmit="return tests()" >
-			   <h2>Sign Up</h2>
-		   <p>It's free and only takes a minute.</p>
+			   <h2 align="center">Sign Up</h2>
+		   <p align="center">It's free and only takes a minute.</p>
 		  <hr>
 	             <div class="form-group">
 			              <label>FullName*</label>
@@ -287,7 +290,7 @@
                </div>
 			<div class="form-group">
 			         <label> Email Id *</label>
-        	        <input type="text" class="form-control" name="eid" maxlength="15" required="required">
+        	        <input type="text" class="form-control" name="eid" maxlength="40" required="required">
         	        <p id="f5">
                </div>
 			<div class="form-group">
@@ -297,42 +300,26 @@
                </div>	
 				<div class="form-group">
 			         <label> Department *</label>
-        	        <input type="text" class="form-control" name="usertype" maxlength="15" required="required">
-        	        <p id="f24">
+        	        <input type="text" class="form-control" name="city" maxlength="15" required="required">
+        	        <p id="f6">
                </div>	
+              <div class="form-group">
+			         <label> Phone Number * +</label>
+        	        <input type="text" class="form-control" name="phone" maxlength="12" required="required">
+        	        <p id="f7">
+               </div>	 
 				
-				
-				<tr>
-					<td> Department *</td>
-					<td><input type="text" name="city" maxlength="40"/></td>
-					<td><p id="f6"></p></td>
-				</tr>
-				<tr>
-					<td> Phone Number * +</td>
-					<td><input type="text" name="phone" maxlength="12"/></td>
-					<td>(919493474679)</td>
-					<td><p id="f7"></p></td>
-				</tr>
-				<tr>
-					<td>Security question *</td>
-					<td><input type="text" name="qus"/></td>
-					<td><p id="qusp"></p></td>
-				</tr>
-				<tr>
-					<td>Answer *</td>
-					<td><input type="text" name="ans"/></td>
-					<td><p id="ansp"></p></td>
-				</tr>
-				<tr>
-				        <td><input type="submit" value="submit"/>&nbsp;
-				        <input type="button" value="cancel" onclick="repl()"/></td>
-				</tr>
-			</table>	
-		</form>
 			
-        </div>       	  
-       
-</div></div>
+			
+				 <div class="form-group">
+              <input type="submit"  value="Sign Up" class="btn btn-primary btn-block btn-lg"/>
+                <input type="button" value="cancel" class="btn btn-primary btn-block btn-lg" onclick="repl()"/>
+        </div>
+				       
+				<p class="small text-center">By clicking the Sign Up button, you agree to our <br><a href="#">Terms &amp; Conditions</a>, and <a href="#">Privacy Policy</a></p>	
+		</form>
+		<div class="text-center">Already have an account? <a href="index.jsp">Login here</a></div>
+</div>
 </body>
 
 </html>
